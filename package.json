@@ -5,25 +5,34 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build:test": "vite build --mode test",
+    "build:prod": "vite build --mode prod",
     "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@unhead/vue": "^1.11.15",
+    "@vueuse/core": "^12.4.0",
     "axios": "^1.7.9",
     "nprogress": "^0.2.0",
+    "pinia": "^2.3.1",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.14.0",
+    "@unocss/eslint-plugin": "65.4.0",
+    "@unocss/preset-rem-to-px": "65.4.0",
     "@vitejs/plugin-vue": "^5.2.1",
+    "autoprefixer": "^10.4.20",
     "cross-env": "^7.0.3",
     "eslint": "^9.18.0",
+    "less": "^4.2.2",
     "lint-staged": "^15.4.1",
+    "postcss-px-to-viewport-8-plugin": "^1.2.5",
     "simple-git-hooks": "^2.11.1",
+    "unocss": "65.4.0",
     "unplugin-vue-router": "^0.10.9",
     "vite": "^6.0.5"
   },

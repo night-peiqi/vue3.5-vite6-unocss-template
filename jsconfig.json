@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "~root/*": ["./*"]
+    }
+  },
+  "include": [
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "src/**/*.vue",
+    "tests/**/*.js",
+    "tests/**/*.jsx"
+  ]
+}

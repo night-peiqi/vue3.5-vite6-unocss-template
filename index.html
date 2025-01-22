@@ -1,13 +1,48 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + Vue</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <title>Ai 助手</title>
+  <script>
+    var scale = 1
+    var metaEl = document.createElement('meta')
+    metaEl.setAttribute('name', 'viewport')
+    metaEl.setAttribute(
+      'content',
+      'width=device-width, initial-scale=' +
+      scale +
+      ', maximum-scale=' +
+      scale +
+      ', minimum-scale=' +
+      scale +
+      ', user-scalable=no' +
+      ', viewport-fit=cover'
+    )
+    document.querySelector('head').appendChild(metaEl)
+    function setRootFZ() {
+      var clientWidth = document.documentElement.clientWidth
+      const origin = window.location.origin
+
+      var maxWidth = 1920
+      if (clientWidth > maxWidth) {
+        clientWidth = maxWidth
+      }
+      var rem = clientWidth / 100
+      // document.documentElement.style.maxWidth = maxWidth + 'px'
+      document.documentElement.style.fontSize = rem + 'px'
+      console.log('rem', rem)
+    }
+    setRootFZ()
+    window.addEventListener('resize', setRootFZ)
+  </script>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
